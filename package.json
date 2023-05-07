@@ -5,7 +5,7 @@
   "license": "GPLv3",
   "scripts": {
     "build": "babel src --extensions .js,.jsx,.ts,.tsx --out-dir dist",
-    "lint": "eslint . --ignore-path .gitignore",
+    "lint": "eslint . --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx",
     "prettier": "prettier --ignore-path .gitignore \"*/**.+(js|jsx|json|ts|tsx|html|css|sass|scss)\"",
     "format": "npm run prettier -- --write",
     "check-format": "npm run prettier -- --check",
@@ -17,6 +17,8 @@
     "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-typescript": "^7.21.5",
+    "@typescript-eslint/eslint-plugin": "^5.59.2",
+    "@typescript-eslint/parser": "^5.59.2",
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
     "prettier": "^2.8.8",
